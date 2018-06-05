@@ -1,0 +1,946 @@
+/* 
+    Created on : Apr 18, 2016, 10:52:35 AM
+    Author     : Maxfield Valentine Davis, Emily Smith, Neal Zhu
+*/
+
+
+/*####################################whole website####################################*/
+
+*{
+    font-family: font;
+}
+
+@font-face{
+    font-family: font;
+    src:url("../teen.ttf");
+}
+
+a {
+    text-decoration: none;
+}
+article {
+    margin:1% auto 1% auto;
+    width:80%;
+}
+
+body{
+    background-image:  url('../img/greenbg.jpg');
+}
+/* TEXT STYLING @ TEXT STYLING @ TEXT STYLING @ TEXT STYLING @ */ 
+
+h1 {
+    font-size: 2em;
+    /*    margin-left: 4em;*/
+    text-align: center;
+
+}
+h2 {
+    font-size: 1em;
+}
+h3 {
+    font-size: 1em;
+}
+header {
+    display: inline-block;
+}
+
+img{
+    margin: auto;
+}
+/*>>>>>>>>>>>>>>>>>>TAGLINE TAGLINE <<<<<<<<<<<<<<<<<<<<<*/
+
+img.logo{
+    margin-top:1em;
+    /*Emily */
+}
+/*p.tagline {
+
+    left: 22px; Emily 
+    position: relative;
+    -webkit-animation: mymove 4s 1;
+    animation: mymove 4s 1;
+    -webkit-animation:mymove 4s 1;
+    display: inline-block;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease;
+    animation-delay: 1.6s;
+    -webkit-animation-delay: 1.6s;/*
+    font-size: 134%;
+    bottom: 11px;
+}
+
+@keyframes mymove {
+    0% {left: 15%;}
+}
+ Chrome, Safari, Opera  
+@-webkit-keyframes mymove {
+    0% {left: 15%;}
+        15% {left: 80px;}
+        25%  {left: 120px;}
+        35% {left:150px;}
+        45% {left:180px;}
+    55%{left:20%;}
+        65% {left:160px;}
+        75%  {left: 130px;}
+        85% {left:100px;}
+        95% {left:50px;}
+        100% {left: 10px;}
+emily changed the tagline from swipe in from the left - to a zoom in effect because i moved the navbar.
+}*/
+
+p.tagline {-webkit-animation:animatezoom 0.6s;
+           animation:animatezoom 0.6s;
+           left:22px;
+           position: relative;
+           display: inline-block;
+           -webkit-transition-timing-function: ease;
+           transition-timing-function: ease;
+           /*                  animation-delay: 1.6s;
+                             -webkit-animation-delay: 1.6s;*/
+           font-size: 134%;
+           bottom: 11px;
+}
+
+/*@mixin keyframes(animatezoom){*/
+/*    @-webkit-keyframes animatezoom{from{-webkit-transform:scale(0)} to{-webkit-transform:scale(1)}}*/
+@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}}
+/*}*/
+
+
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>HOME PAGE<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<*/
+
+/*>>>>>>>>>>>>>>>>>>home page body<<<<<<<<<<<<<<<<<<<<<*/
+/*@-webkit-keyframes fadingWelcome{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fading{
+    0% {
+        opacity: 0;
+        left: -66%;
+    }
+    100% {
+        opacity: 1;
+        left: -22%;
+    }
+}*/
+@keyframes fading{
+    0% {
+        opacity: 0;
+        left: -66%;
+    }
+    100% {
+        opacity: 1;
+        left: -18%;
+    }
+}
+/*@-webkit-keyframes fadingIEEE{
+    0%{opacity:0}
+    100%{opacity:1}
+}*/
+@keyframes fadingIEEE{
+    0%{opacity:0}
+    25%{opacity:0}
+    100%{opacity:1}
+}
+.welcome{
+    position: relative;
+
+}
+
+
+
+@media only screen and (min-width: 1430px) and (min-height: 800px) {
+    .welcome{
+        -webkit-animation:fading 2s;
+        animation:fading 2s;
+        /*opacity: 0;left: -25%;*/
+    }
+    .IEEE{ 
+        animation:fading 4s;      
+        left: 17%;
+        -webkit-animation:fading 4s;
+    }
+}
+@media only screen and (min-width:1430px) and (max-height: 700px) {
+    body#index span.IEEE, body#index span.welcome{
+        display: none;
+    }
+    nav{
+        padding-bottom: 3%;
+    }
+}
+@media only screen and (min-width: 1430px) and (min-height: 700px) {
+    .welcome{
+        -webkit-animation:fadingWelcome 2s;
+        animation:fadingWelcome 2s;
+    }
+    .IEEE{ 
+        animation:fading 4s;      
+        -webkit-animation:fading 4s;
+        left: 17%;
+    }
+}
+@media only screen and (max-width: 1430px) and (min-height: 800px) {
+    .welcome{
+        -webkit-animation:fading 2s;
+        animation:fading 2s;
+        left: -18%;
+        /*        -webkit-transition-timing-function: ease;
+                transition-timing-function: ease;*/
+    }
+    .IEEE{ 
+        animation:fadingIEEE 8s;      
+        -webkit-animation:fadingIEEE 8s;
+        left: 17%;
+    }
+}
+@media only screen and (max-width:1430px) and (max-height: 700px) {
+    body#index span.IEEE, body#index span.welcome{
+        display: none;
+    }
+    nav{
+        padding-bottom: 3%;
+    }
+}
+@media only screen and (max-width: 1430px) and (min-height: 700px) {
+    span.IEEE {
+        position: absolute;
+        top: 135px;
+        padding-left: 40%;
+    }
+    .welcome{
+        -webkit-animation:fading 2s;
+        animation:fading 2s;
+        /*opacity: 0;*/left: -18%;
+    }
+    .IEEE{ 
+        animation:fadingIEEE 8s;      
+        -webkit-animation:fadingIEEE 8s;
+        left: 17%;
+    }
+}
+@media only screen and (max-width: 750px) and (min-height: 800px) {
+    .welcome{
+        -webkit-animation:fading 2s;
+        animation:fading 2s;
+        /*opacity: 0;*/left: -18%;
+    }
+    .IEEE{ 
+        animation:fadingIEEE 8s;      
+        -webkit-animation:fadingIEEE 8s;
+        left: 17%;
+    }
+}
+@media only screen and (max-width: 750px) and (max-height: 700px) {
+    body#index span.IEEE, body#index span.welcome{
+        display: none;
+    }
+    nav{
+        padding-bottom: 3%;
+    }
+}
+@media only screen and (max-width: 750px) and (min-height: 700px) {
+    span.IEEE {
+        position: absolute;
+        top: 146px;
+        padding-left: 40%;
+    }
+    .welcome{
+        -webkit-animation:fading 2s;
+        animation:fading 2s;
+        /*opacity: 0;*/left: -18%;
+    }
+    .IEEE{ 
+        animation:fadingIEEE 8s;      
+        -webkit-animation:fadingIEEE 8s;
+        left: 17%;
+    }
+}
+@media only screen and (max-width: 720px) {
+    body#index span.IEEE, body#index span.welcome{
+        display: none;
+    }
+    nav{
+        padding-bottom: 3%;
+    }
+}
+/*The about Us section on the Index PAge */
+.section1{
+    margin-top:2em;
+    margin-bottom: 1em;
+}
+
+h2#history{
+    font-size:1.5em;
+    margin-left:4em;
+}
+p.history{
+    line-height: 1.7em;
+    margin-left: 4em;
+    margin-left: 4em;
+    width:80%;
+}
+
+@media only screen and (max-width: 1065px){
+    section#welcomeSection nav, section#myCalendar nav{
+        display:none;
+    }
+}
+
+
+h2.homeCalendar {
+    font-size: 181%;
+    border-bottom: 2px solid black;
+}
+.homeWelcome {
+    width: 80%;
+    margin-left: 5em;
+    margin-right:2em;
+    /*Emily */
+}
+p.homeWelcome {
+    line-height: 1.7em;
+    margin-left: 4em;
+    display: inline-block;
+    width: 40%;
+    float: left;
+}
+
+section#myCalendar footer {
+    position: absolute;
+    bottom: 0;
+}
+
+span.IEEE{
+    z-index: -1;
+} /*emily addon friday*/
+
+iframe.videoWelcome{
+    margin-left: 10%;
+}
+span.welcome, span.IEEE, span.IEEELong {
+    display: block;
+    text-align: center;
+    line-height: 2em;
+    /* font-size: 242%; */
+}
+span.IEEE {
+    font-size: 1000%;
+    -webkit-text-fill-color: transparent;
+    color:#0ac2d2;
+    background: -webkit-linear-gradient(transparent, transparent), url(../img/Capture1.png) repeat;
+    background: -o-linear-gradient(transparent, transparent);
+    -webkit-background-clip: text;
+    font-weight: 900;
+    margin: -0.5em 0;
+}
+span.welcome {
+    font-size: 462%;
+}
+span.IEEELong {
+    font-size: 199%;
+}
+
+
+
+
+ol.navSocialMediaOl li {
+    width: 1%;
+    min-width: 2em;
+    display: inline-block;
+    padding: 1% 0.5% 1% 1%;
+}
+ol.navSocialMediaOl {
+    display: inline-block;
+    float: right;
+    width: 5%;
+}
+nav {
+    margin: 0 13% 0 13%;
+    display: inline-block;
+    width: 73%;
+}
+
+.navDropDown{
+    visibility: hidden;
+    display: none;
+}
+li.activeLi {
+    background-color: #0ac2d2 ; /*emily, color change*/
+    color: #414A52;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 10px 20px 10px 20px;
+    color: #fff;
+}
+
+.header ol li {
+    display: inline-block;
+}
+.header {
+    float: right;
+    display: inline-block;
+    text-align: center;
+
+}
+/*Responsive top*/
+@media screen and (max-width:1440px){
+    .header{
+        float: none;
+        margin:auto auto auto 20%;
+        /*I change this*/
+    }
+
+    img.logo{
+        margin-left: 20%;
+    }
+}
+
+
+.hvr-bounce-to-right {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    text-decoration: none;
+    color: #414A52;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 10px 20px;
+}
+.hvr-bounce-to-right:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #CAB1F6; /*Emily - color change*/
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+.hvr-bounce-to-right:hover, .hvr-bounce-to-right:focus, .hvr-bounce-to-right:active {
+    color: white;
+}
+.hvr-bounce-to-right:hover:before, .hvr-bounce-to-right:focus:before, .hvr-bounce-to-right:active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+.navLi:after{
+    background: url(img/vertical-line.png);
+}
+li.navLi, li.activeLi {
+    border-right: 2px solid #006599;
+    letter-spacing: 1px;
+    font-size: 13px;
+}
+a.joinLink {
+    text-decoration: none;
+    padding: 7px 20px 10px 20px;
+    margin-left: -4px;
+    color: white;
+    text-transform: uppercase;
+    background-color: #fd6a62; /*Emily - color changing*/
+}
+
+
+
+
+
+
+/*>>>>>>>>>>>>>>>>>>home page image slide<<<<<<<<<<<<<<<<<<<<<*/
+/*.homeSlideSection {
+    background-image: url('../img/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.imgSliderText {
+    position: absolute;
+    top: 36vw;
+    left: 2vw;
+    background-color: white;
+    padding: 2px 3px 2px 3px;
+    max-width: 45%;
+    font-size: 16px;
+}
+img.slideImg {
+    width: 100%;
+    height: 100%;
+}
+.slides {
+    width: 100%;
+    height: 100%;
+}
+.badge{
+    color:#fff;
+    display:inline-block;
+    padding-left:8px;
+    padding-right:8px;
+    font-weight:bold;
+    text-align:center;
+    border-radius:50%
+}
+img.left-arrow,  img.right-arrow{
+    width: 100%;
+}
+.homeSlide{
+    position:relative;
+    width:73%;
+    margin:2% auto 2% auto;
+    height:43vw;
+}
+@media screen and (max-width:600px){
+    li.rightArrow{float:none}
+}
+.leftArrow{
+    float:left;
+    bottom: 22vw;
+    position: relative;
+    width:3%;
+}
+.left-arrow:hover{
+    -webkit-transform: translateX(-7px);
+    transform: translateX(-7px) scale(1.1,1.1);
+}
+.left-arrow{
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transition-duration: 0.1s;
+    transition-duration: 0.1s;
+}
+.rightArrow{
+    float:right;
+    bottom: 22vw;
+    position: relative;
+    width:3%;
+}
+.right-arrow:hover{
+    -webkit-transform: translateX(7px);
+    transform: translateX(7px) scale(1.1,1.1);
+}
+.right-arrow{
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transition-duration: 0.1s;
+    transition-duration: 0.1s;
+}
+.center{
+    text-align:center;
+}
+.display-bottomleft{
+    position:absolute;
+    left:0;
+    top: 41vw;
+}
+.border{
+    border:1px solid #ccc;
+}
+.transparent{
+    background-color:transparent
+}
+.w3-white,.hover-white:hover{
+    color:#000;
+    background-color:#fff
+}
+
+.text-white{
+    color:#fff;
+}
+
+body .accordion-slider p.as-layer{
+    font-size: 130%;
+}*/
+.as-layer.as-opened.as-black.as-padding.hide-small-screen{
+    font-size: 110%;
+}
+
+/*>>>>>>>>>>>>>>>>>>>>>OFFICERS PAGE Officers<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+@media only screen and (min-width: 1220px)
+{
+    img.img-circle {
+        border-radius: 50%;
+        margin:auto;
+        max-width: 350px;
+        padding-top: 10%;
+       height: 365px;
+    width: 360px;
+    }
+/*    img.img-circle1 {
+        border-radius: 50%;
+        margin:auto;
+        max-width: 350px;
+        padding-top: 10%
+    }
+
+    img.img-circle2 {
+        border-radius: 50%;
+        margin:auto;
+        max-width: 350px;
+        padding-top: 10%
+    }
+    img.img-circle3 {
+        border-radius: 50%;
+        margin:auto;
+        max-width: 350px;
+        padding-top: 10%
+    }
+    img.img-circle4 {
+        border-radius: 50%;
+        margin:auto;
+        max-width: 350px;
+        padding-top: 10%
+    }
+
+    img.img-circle5 {
+        border-radius: 50%;
+        margin:auto;
+        max-width: 350px;
+        padding-top: 10%
+    }
+    img.img-circle6 {
+        border-radius: 50%;
+        margin:auto;
+        max-width: 350px;
+        padding-top: 10%
+    }*/
+
+
+    .container{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .col-md-7{
+        float: left;
+        width:58%;
+        padding:1.7em
+    }
+    .col-md-71 {
+    padding-left: 3%;
+    width: 800px;
+}
+
+    .col-md-5{
+        float:left;
+        padding-top: 1em;
+        padding-bottom:.5em;
+    }
+
+
+
+    .container, .containerMarketing, .rowFeaturette, .col-md-5, .col-md-7{
+        display: inline-block;
+    }
+    .lead{
+        font-size:21px;
+        line-height: 1.4;
+    }
+    .featurette-heading{
+        font-size: 30px;
+        padding-left:40%
+    }
+}
+/*@media only screen and (max-width: 1223px){
+    img.img-circle{
+        max-width: 300px;
+        margin-top:2em;
+    }
+}*/
+
+@media only screen and (max-width: 1219px){
+    img.img-circle {
+        border-radius: 50%;
+        margin:auto;
+        max-width: 350px;
+    }
+
+    .container{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .col-md-7{
+        float: left;
+        width:70%;
+        padding:1.7em;
+        margin-left:10%;
+
+    }
+
+    .col-md-5{
+        float:none;
+        padding-top: 1em;
+        padding-bottom:.5em;
+        margin-left: 20%
+    }
+
+    hr.featurette-divider {
+        display: none;
+    }
+
+
+    .container, .containerMarketing, .rowFeaturette, .col-md-5, .col-md-7{
+        display: inline-block;
+    }
+    .lead{
+        font-size:21px;
+        line-height: 1.4;
+    }
+    .featurette-heading{
+        font-size: 30px;
+        padding-left:40%
+    }
+}
+
+
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>EVENTS AND PRoJECT SYTLING _ EMIly <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
+body#events h1, body#events h3, body#projects h1, body#projects h3{
+    width: 80%;
+    margin: 2% auto 0 auto;
+}
+.event {
+    display:inline-block;
+    width: 20%;
+    float: left;
+    padding: .5em;
+    margin: 1em 2em 1em 2em;
+    border: black 1pt dashed;
+
+}
+
+.project{
+    display:inline-block;
+    width: 20%;
+    float: left;
+    padding: .5em;
+    margin: 1em 2em 1em 2em;
+    border: black 1pt dashed;
+
+}
+
+article.eventArticle{
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+
+}
+
+article.projectArticle{
+    margin:auto;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+
+
+}
+
+
+
+/*Emily - adding style to the event/project figures*/
+figure img{
+    max-width:350px;
+    padding:7px;
+
+}
+figure.small-img{
+    background-color:white;
+    display:inline-block;
+    border: 1px black dotted;
+}
+
+figcaption{
+    text-align: center;
+}
+
+
+/* Button */ 
+
+a {
+    color: black;
+}
+/*I changed the button- emily*/
+/*a.div-button{
+    background-color: rgba(255,152,2,1);
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-left: 10%;
+    margin-top: 5%;
+
+} */
+
+.div-button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: rgba(255,152,2,1);
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    padding: 15px 25px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-left: 25%;
+    margin-top:5%;
+}
+
+.div-button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.div-button span:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+a.div-button:hover span {
+    padding-right: 25px;
+}
+
+.div-button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+
+
+
+
+
+
+
+p.about {
+    font-size: 1em;
+    line-height: 2em;
+    margin: 1em 1.5em 1em 1.5em;
+}
+
+
+/*>>>>>>>>>>>>>>>>>>>>CALENDAR CALENDAR CALENDAR <<<<<<<<<<<<<*/
+
+.date{
+    float:left;
+    width:7%;
+}
+
+
+/*MIRCOMOUSE STYLE*/
+
+div.micromouse{
+    padding-left: 10%;
+
+}
+
+/*>>>>>>>>>>>>>>>>>>FOOTER STYLE FOOTER <<<<<<<<<<<<<<<<<<<<<*/
+
+
+.resources, .socialMedia, ol.footerRight li, ol.footerRight {
+    display: inline-block;
+}
+
+li.resourcesLi{
+    font-weight:bold;
+    font-size:1em;
+}
+a.footerLink{
+    color:white;
+}
+a.footerLink:hover{
+    font-weight: bold;
+    color: black;
+
+    /*Emily*/
+}
+li.facebookLi, li.twitterLi {
+    width: 7%;
+    min-width: 2em;
+    display: inline-block;
+    padding: 1% 12% 1% 1%;
+}
+ul.resources{
+    list-style: none;  
+    /*emily - i dont think this works*/
+}
+img.twitter, img.fb, img.uvmlogo{
+    width: 100%;
+}
+footer {
+    background: url('../img/bg-texture.png');
+    padding: 2% 10% 2% 10%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fdc162;
+    position: absolute;
+
+    left:0;
+
+
+}
+footer div{
+    width:30%; /*emily*/
+    text-align: center; /*emily*/
+}
+li.UVMLogo {
+    width: 70%; /*emily*/
+    list-style: none;
+    min-width: 9em;
+    padding-left: 10%; /*emily*/
+}
+.socialMedia {
+    float: right;
+}
+
+li.contactLi{
+    list-style: none;
+}
+
+
+ul.resourcesOl{
+    list-style: none;
+    /*Emily*/
+}
+
+
+
